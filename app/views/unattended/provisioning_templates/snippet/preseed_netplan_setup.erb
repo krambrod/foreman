@@ -63,6 +63,7 @@ oses:
                   :dhcp => bridge.subnet.nil? ? false : bridge.subnet.dhcp_boot_mode?,
                   :dhcp6 => bridge.subnet6.nil? ? false : bridge.subnet.dhcp_boot_mode? }) -%>
   <%= result -%>
+        interfaces: <%= bridge.attached_devices_identifiers %>
 <%- end -%>
 <%#
 ##### Processing vlan interfaces #####
